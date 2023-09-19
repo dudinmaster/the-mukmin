@@ -1,1 +1,4 @@
 K4ZUUH4426
+
+untuk styling font arabian style , gunakan css font family
+fontFamily: 'Amiri Quran', Poppins;
