@@ -23,7 +23,7 @@
                             <i class="fa fa-mosque fa-4x text-dark"></i>
                             <div class="ms-4">
                                 <h4><?= $row['judul'];?></h4>
-                                <p class="mb-4"><?= $trim_text . '...' ;?></p>
+                                <p class="mb-4"><?= $trim_text .'...' ;?></p>
                                 <a href="" class="btn btn-primary px-3">Read More</a>
                             </div>
                         </div>

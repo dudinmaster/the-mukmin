@@ -362,12 +362,14 @@ include "../config.php" ;
                                          if (mysqli_num_rows($result) > 0) {
                                             // output data of each row
                                             while($row = mysqli_fetch_assoc($result)) {
+                                        
+                                        $trim_text = substr($row['isi_komentar'],0,15);
                                          $number++;
                                          echo "
                                          <tr>
                                          <td>$number</td>
-                                         <td>".$row['date_created_add']."</td>
-                                         <td>".$row['isi_komentar']."</td>";?>
+                                         <td>".$row['date_created_add']."";?></td>
+                                         <td><?= $trim_text.'...';?></td>
                                          <td class="text-center"><a href="komentar/approve_komentar.php?id=1" class="btn btn-success">Approve This</a></td>
                                          <?php
                                          echo"
