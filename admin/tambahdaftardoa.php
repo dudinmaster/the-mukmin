@@ -327,9 +327,7 @@ include "../config.php" ;
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Database Doa</h1>
-                        <a href="tambahdaftardoa.php" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Tambah Data</a>
+                        <h1 class="h3 mb-0 text-gray-800">Doa dan Dzikir</h1>
                     </div>
 
                     <!-- Content Row -->
@@ -342,48 +340,10 @@ include "../config.php" ;
                             <!-- Illustrations -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-success">Daftar Doa</h6>
+                                    <h6 class="m-0 font-weight-bold text-success">Tambah Data</h6>
                                 </div>
                                 <div class="card-body">
                                                     <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 700px">
-                                    <table class="table table-striped mb-0">
-                                        <thead style="background-color: #1cc88a;">
-                                        <tr>
-                                            <th scope="col" class="text-center text-light">No</th>
-                                            <th scope="col" class="text-center text-light">Judul</th>
-                                            <th scope="col" class="text-center text-light">Thumbnail</th>
-                                            <th scope="col" class="text-center text-light ">Isi konten</th>
-                                            <th scope="col" class="text-center text-light " colspan="2">Aksi</th>
-                                        </tr>
-                                        </thead>
-
-                                        <?php
-                                         $sql = "select * from daftardoa order by judul asc limit 5";
-                                         $result = mysqli_query($conn, $sql) ;
-                                         $number = 0 ;
-                                         if (mysqli_num_rows($result) > 0) {
-                                            // output data of each row
-                                            while($row = mysqli_fetch_assoc($result)) {
-                                         $number++;
-                                         $trim_text = substr($row['isi_konten'],0,350);
-                                         echo "
-                                         <tr>
-                                         <td>$number</td>
-                                         <td>".$row['judul']."</td>
-                                         <td>".$row['thumbnail']."</td>
-                                         <td>".$trim_text."</td>";?>
-                                         <td> <a href='editdatauser.php?id=<?= $row['id'];?>'>Edit</td>
-                                         <td> <a href='deletethe_mukmin.php?id=<?= $row['id'];?>'>Delete</td>
-                                        
-                                         <?php
-                                         echo"
-                                         </tr>"; 
-                                         }
-                                         } else {
-                                         echo "0 results";
-                                         }
-                                         ?>
-                                    </table>
                                     </div>
                                 </div>
                             </div>
