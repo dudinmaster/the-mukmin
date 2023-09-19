@@ -362,8 +362,7 @@ include "../config.php" ;
                                          if (mysqli_num_rows($result) > 0) {
                                             // output data of each row
                                             while($row = mysqli_fetch_assoc($result)) {
-                                        
-                                        $trim_text = substr($row['isi_komentar'],0,15);
+                                            $trim_text = substr($row['isi_komentar'],0,10);
                                          $number++;
                                          echo "
                                          <tr>

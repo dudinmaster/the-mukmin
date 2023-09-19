@@ -355,6 +355,7 @@ include "../config.php" ;
                                             <th scope="col" class="text-center text-light ">Isi konten</th>
                                             <th scope="col" class="text-center text-light ">Aksi</th>
                                             <th scope="col" class="text-center text-light ">Aksi</th>
+                                            <th scope="col" class="text-center text-light ">Aksi</th>
                                         </tr>
                                         </thead>
 
@@ -366,14 +367,16 @@ include "../config.php" ;
                                             // output data of each row
                                             while($row = mysqli_fetch_assoc($result)) {
                                          $number++;
+                                         $trim_text = substr($row['isi_konten'],0,350);
                                          echo "
                                          <tr>
                                          <td>$number</td>
                                          <td>".$row['judul']."</td>
                                          <td>".$row['thumbnail']."</td>
-                                         <td>".$row['isi_konten']."</td>";?>
-                                          <td> <a href='updatedatauser.php?id=<?= $row['id'];?>'>Edit</td>
+                                         <td>".$trim_text."</td>";?>
+                                         <td> <a href='updatedatauser.php?id=<?= $row['id'];?>'>Edit</td>
                                          <td> <a href='deletethe_mukmin.php?id=<?= $row['id'];?>'>Delete</td>
+                                         <td> <a href='_mukmin.php?id=<?= $row['id'];?>'>Delete</td>
                                          <?php
                                          echo"
                                          </tr>"; 
