@@ -34,7 +34,7 @@ if (!isset($_SESSION['username'])) {
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
@@ -64,21 +64,21 @@ if (!isset($_SESSION['username'])) {
 
             <!-- Nav Item - Komentar -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href="komentar.php">
                     <i class="fas fa-fw fa-comment"></i>
                     <span>Komentar User</span></a>
             </li>
 
             <!-- Nav Item - Daftar Doa -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href="daftar-doa.php">
                     <i class="fas fa-fw fa-person-praying"></i>
                     <span>Daftar Doa</span></a>
             </li>
 
             <!-- Nav Item - Daftar User -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href="daftar-user.php">
                     <i class="fas fa-fw fa-list"></i>
                     <span>Daftar User</span></a>
             </li>
@@ -130,7 +130,7 @@ if (!isset($_SESSION['username'])) {
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                                 aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
+                                <button class="btn btn-success" type="button">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
@@ -155,7 +155,7 @@ if (!isset($_SESSION['username'])) {
                                             placeholder="Search for..." aria-label="Search"
                                             aria-describedby="basic-addon2">
                                         <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
+                                            <button class="btn btn-success" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
                                             </button>
                                         </div>
@@ -325,7 +325,7 @@ if (!isset($_SESSION['username'])) {
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 

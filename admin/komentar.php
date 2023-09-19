@@ -2,6 +2,9 @@
 if (!isset($_SESSION['username'])) {
     header("Location: index.php");
 }
+
+include "../config.php" ;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +37,7 @@ if (!isset($_SESSION['username'])) {
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
@@ -64,21 +67,21 @@ if (!isset($_SESSION['username'])) {
 
             <!-- Nav Item - Komentar -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href="komentar.php">
                     <i class="fas fa-fw fa-comment"></i>
                     <span>Komentar User</span></a>
             </li>
 
             <!-- Nav Item - Daftar Doa -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href="daftar-doa.php">
                     <i class="fas fa-fw fa-person-praying"></i>
                     <span>Daftar Doa</span></a>
             </li>
 
             <!-- Nav Item - Daftar User -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href="daftar-user.php">
                     <i class="fas fa-fw fa-list"></i>
                     <span>Daftar User</span></a>
             </li>
@@ -130,7 +133,7 @@ if (!isset($_SESSION['username'])) {
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                                 aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
+                                <button class="btn btn-success" type="button">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
@@ -155,7 +158,7 @@ if (!isset($_SESSION['username'])) {
                                             placeholder="Search for..." aria-label="Search"
                                             aria-describedby="basic-addon2">
                                         <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
+                                            <button class="btn btn-success" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
                                             </button>
                                         </div>
@@ -324,8 +327,8 @@ if (!isset($_SESSION['username'])) {
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                        <h1 class="h3 mb-0 text-gray-800">Database komentar</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 
@@ -339,27 +342,41 @@ if (!isset($_SESSION['username'])) {
                             <!-- Illustrations -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">List Komentar</h6>
+                                    <h6 class="m-0 font-weight-bold text-success">Daftar Komentar</h6>
                                 </div>
                                 <div class="card-body">
                                                     <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 700px">
                                     <table class="table table-striped mb-0">
-                                        <thead style="background-color: #002d72;">
+                                        <thead style="background-color: #1cc88a;">
                                         <tr>
-                                            <th scope="col" class="text-center">Nama</th>
-                                            <th scope="col" class="text-center">Isi Komentar</th>
-                                            <th scope="col" class="text-center">Tanggal</th>
-                                            <th scope="col" class="text-center">Status</th>
-                                            <th scope="col" class="text-center">Aksi</th>
+                                            <th scope="col" class="text-center text-light">No</th>
+                                            <th scope="col" class="text-center text-light">Tanggal</th>
+                                            <th scope="col" class="text-center text-light">Isi Komentar</th>
+                                            <th scope="col" class="text-center text-light">Status</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td class="text-center">dudin</td>
-                                            <td class="text-center">apapun demi my husbando</td>
-                                            <td class="text-center">12 september 2023, 16:21</td>
-                                            <td class="text-center"><p style="color:red">Reject</p><p style="color:green">Reject</p></td>
-                                            <td class="text-center"><a href="komentar/approve_komentar.php?id=1" class="btn btn-success">Approve This</a></td>
+                                        <?php
+                                         $sql = "select * from komentar order by date_created_add asc limit 5";
+                                         $result = mysqli_query($conn, $sql) ;
+                                         $number = 0 ;
+                                         if (mysqli_num_rows($result) > 0) {
+                                            // output data of each row
+                                            while($row = mysqli_fetch_assoc($result)) {
+                                         $number++;
+                                         echo "
+                                         <tr>
+                                         <td>$number</td>
+                                         <td>".$row['date_created_add']."</td>
+                                         <td>".$row['isi_komentar']."</td>";?>
+                                         <td class="text-center"><a href="komentar/approve_komentar.php?id=1" class="btn btn-success">Approve This</a></td>
+                                         <?php
+                                         echo"
+                                         </tr>"; 
+                                         }
+                                         } else {
+                                         echo "0 results";
+                                         }
+                                         ?>
                                         </tr>
                                         </tbody>
                                     </table>
