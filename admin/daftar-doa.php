@@ -365,15 +365,37 @@ include "../config.php" ;
                                             // output data of each row
                                             while($row = mysqli_fetch_assoc($result)) {
                                          $number++;
-                                         $trim_text = substr($row['isi_konten'],0,350);
+                                         $trim_text = substr($row['isi_konten'],0,1000);
                                          echo "
                                          <tr>
                                          <td>$number</td>
                                          <td>".$row['judul']."</td>
                                          <td>".$row['thumbnail']."</td>
-                                         <td>".$trim_text."</td>";?>
-                                         <td> <a href='editdatauser.php?id=<?= $row['id'];?>'>Edit</td>
-                                         <td> <a href='deletethe_mukmin.php?id=<?= $row['id'];?>'>Delete</td>
+                                         <td>".$trim_text."...</td>";?>
+                                         <td> <a href='updatedaftardoa.php?id=<?= $row['id'];?>' class="btn-sm btn-warning">Edit</a></td>
+                                         <td>   
+                                                <a href="#" class="btn-sm btn-danger" data-target="#deleteModal" data-toggle="modal">Delete</a>
+                                         </td>
+
+                                         <!-- Delete Modal-->
+                                        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Are you sure to delete this data ?</h5>
+                                                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">×</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">Select "Yes" to continue delete </div>
+                                                    <div class="modal-footer">
+                                                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                                        <a class="btn btn-danger" href="deletedaftardoa.php?id=<?= $row['id'];?>">Yes</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         
                                          <?php
                                          echo"

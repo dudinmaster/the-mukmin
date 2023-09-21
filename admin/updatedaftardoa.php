@@ -349,26 +349,33 @@ include "../config.php" ;
                     <!-- Content Row -->
                     <div class="row" style="width:100%; !important">
 
+
+                    <?php 
+                        $id_doa = $_GET['id']; 
+                        $sql = "SELECT * FROM daftardoa WHERE id='$id_doa'";
+                        $row = mysqli_fetch_array(mysqli_query($conn,$sql));
+                    ?>
+                        
                         <div class="col-lg-12 mb-4">
                             <!-- Illustrations -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-success">Tambah Data</h6>
+                                    <h6 class="m-0 font-weight-bold text-success">Edit Data</h6>
                                 </div>
                                 <div class="card-body">
-                                    <form action="simpandoa.php" class="form-horizontal" role="form" method="POST" enctype="multipart/form-data">
-
+                                    <form action="simpanupdatedoa.php" class="form-horizontal" role="form" method="POST" enctype="multipart/form-data">
+                                        <input type="hidden" name="iddoa" value="<?= $row['id'];?>">
                                     <div class="form-group">
                                         <label for="name" class="col-sm-3 control-label">Judul</label>
                                         <div class="col-sm-9">
-                                        <input type="text" class="form-control" name="judul" id="judul">
+                                        <input type="text" class="form-control" name="judul" id="judul" value="<?= $row['judul'];?>">
                                         </div>
                                     </div> <!-- form-group // -->
 
                                     <div class="form-group">
                                         <label for="about" class="col-sm-3 control-label">Isi Konten</label>
                                         <div class="col-sm-9">
-                                        <textarea class="form-control" id="isikonten" name="isikonten"></textarea>
+                                        <textarea class="form-control" id="isikonten" name="isikonten"><?= $row['isi_konten'];?></textarea>
                                         </div>
                                     </div> <!-- form-group // -->
                                     
