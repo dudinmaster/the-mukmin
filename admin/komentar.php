@@ -353,6 +353,7 @@ include "../config.php" ;
                                             <th scope="col" class="text-center text-light">Tanggal</th>
                                             <th scope="col" class="text-center text-light">Isi Komentar</th>
                                             <th scope="col" class="text-center text-light">Status</th>
+                                            <th scope="col" class="text-center text-light">Aksi</th>
                                         </tr>
                                         </thead>
                                         <?php
@@ -369,7 +370,18 @@ include "../config.php" ;
                                          <td>$number</td>
                                          <td>".$row['date_created_add']."";?></td>
                                          <td><?= $trim_text.'...';?></td>
-                                         <td class="text-center"><a href="komentar/approve_komentar.php?id=1" class="btn btn-success">Approve This</a></td>
+                                         <td>
+                                            <?php
+                                                if($row['status']='approved'){
+                                                    echo '<h5 style= "color:green;">Approved</h3>';
+                                                }
+                                                else{echo '<h5 style= "color:red;">Deny</h3>';}
+                                            ?>
+                                            
+                                            
+                                            
+                                        </td>
+                                         <td class="text-center"><a href="ubahstatuskomen.php?id=<?= $row['id'];?>" class="btn btn-success">Approve This</a></td>
                                          <?php
                                          echo"
                                          </tr>"; 
