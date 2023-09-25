@@ -370,17 +370,7 @@ include "../config.php" ;
                                          <td>$number</td>
                                          <td>".$row['date_created_add']."";?></td>
                                          <td><?= $trim_text.'...';?></td>
-                                         <td>
-                                            <?php
-                                                if($row['status']='approved'){
-                                                    echo '<h5 style= "color:green;">Approved</h3>';
-                                                }
-                                                else{echo '<h5 style= "color:red;">Deny</h3>';}
-                                            ?>
-                                            
-                                            
-                                            
-                                        </td>
+                                         <td><?= $row['status']?></td>
                                          <td class="text-center"><a href="ubahstatuskomen.php?id=<?= $row['id'];?>" class="btn btn-success">Approve This</a></td>
                                          <?php
                                          echo"
