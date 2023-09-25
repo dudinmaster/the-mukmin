@@ -58,42 +58,31 @@
 
      <!-- Hero Start -->
             <?php 
-                $sql = "select * from daftardoa Where id=1" ; 
+            $iddoa = $_GET['id'];
+                $sql = "select * from daftardoa Where id='$iddoa'" ; 
                 $result = mysqli_query($conn,$sql);
             ?>
             <div class="hero-header-inner animated zoomIn">
-            <?php  while($row = mysqli_fetch_assoc($result)) {   
+            <?php  $row = mysqli_fetch_array($result);   
                     ?>
-                <div class="isikonten_img">
+                <div class="p-5 text-center bg-image rounded-3" style="
+                        background-image: url('img/testt-1.jpg');
+                        height: 200px;">
                     <div class="isikonten-text">
                         <h1 class="display-5 text-dark text-center py-3"><?= $row['judul'];?></h1>
                     </div>
                 </div>
                 
             </div>
-            <?php } ?> 
     <!-- Hero End -->
 
     <!-- About Satrt -->
-
-            <?php 
-                if (isset($_GET["id"])) {
-                    $id = $_GET["id"];
-                }
-                else {
-                    $id= 0;
-                }
-                $sql = "SELECT * FROM daftardoa WHERE id=1"; 
-                $result = mysqli_query($conn,$sql);
-            ?>
             <div class="row g-4">
-                <?php  
-                    while($row = mysqli_fetch_assoc($result)) {   
-                ?>
-                    <div class="mb-4 mb">
-                        <p><?= $row['isi_konten'];?></p>
+                    <div class="mb-1 mb">
+                        <p style="text-alignment:center;margin-left:25%;margin-right:25%;margin-top:35px;"><?= $row['isi_konten'];?></p>
+                    </div>
             </div>
-            <?php } ?> 
+             
             
 
     <div class="container text-center bg-primary py-2 wow fadeIn" data-wow-delay="0.1s">
