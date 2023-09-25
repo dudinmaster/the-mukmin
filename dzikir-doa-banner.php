@@ -12,7 +12,7 @@
                     $sql = "select * from daftardoa" ; 
                     $result = mysqli_query($conn,$sql);
 
-                    //while($row = mysqli_fetch_assoc($result)) {
+
                 ?>
                 <div class="row g-4">
                     <?php  while($row = mysqli_fetch_assoc($result)) { 
@@ -23,8 +23,11 @@
                             <i class="fa fa-mosque fa-4x text-dark"></i>
                             <div class="ms-4">
                                 <h4><?= $row['judul'];?></h4>
+                                <?php
+                                $id = $row['id'];
+                                ?>
                                 <p class="mb-4"><?php echo $trim_text . '...' ;?></p>
-                                <a href="" class="btn btn-primary px-3">Read More</a>
+                                <a href="isi_konten.php?id=$id" class="btn btn-primary px-3">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -32,4 +35,3 @@
                 </div>
             </div>
         </div>
-        <!-- Activities Start -->

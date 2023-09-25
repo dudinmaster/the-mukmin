@@ -94,13 +94,13 @@ h4, h5, h6, .h4, .h5, .h6 {
 }
 
 .btn.btn-primary:hover {
-    color: var(--bs-primary) !important;
+    color: #50C878 !important;
     background: var(--bs-dark) !important;
     border-color: var(--bs-dark) !important;
 }
 
 .btn.btn-dark:hover {
-    color: var(--bs-dark) !important;
+    color: #50C878 !important;
     background: var(--bs-primary) !important;
     border-color: var(--bs-primary) !important;
 }
