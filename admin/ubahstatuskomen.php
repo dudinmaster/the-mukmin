@@ -4,12 +4,13 @@ include "../config.php";
 $id = $_GET['id'];
 
 $sql = "SELECT status FROM komentar WHERE id='$id'";
-$checkstatus = mysqli_query($conn,$sql);
+$query = mysqli_query($conn,$sql);
+$checkstatus = mysqli_fetch_array($query);
 
-if($checkstatus='deny'){
+if($checkstatus['status']=='deny'){
     $ubah = "UPDATE komentar SET status='approved' WHERE id='$id'";
     $result =  mysqli_query($conn,$ubah);
-}if($checkstatus='approved'){
+}if($checkstatus['status']=='approved'){
     $ubah = "UPDATE komentar SET status='deny' WHERE id='$id'";
     $result =  mysqli_query($conn,$ubah);
 }

@@ -365,13 +365,14 @@ include "../config.php" ;
                                             while($row = mysqli_fetch_assoc($result)) {
                                             $trim_text = substr($row['isi_komentar'],0,10);
                                          $number++;
+                                        //  $status = $row['status'];
                                          echo "
                                          <tr>
                                          <td>$number</td>
                                          <td>".$row['date_created_add']."";?></td>
                                          <td><?= $trim_text.'...';?></td>
-                                         <td><?= $row['status']?></td>
-                                         <td class="text-center"><a href="ubahstatuskomen.php?id=<?= $row['id'];?>" class="btn btn-success">Approve This</a></td>
+                                         <td><h4 style="color:<?php echo $row['status']=='approved'?'green':'red';?>;"><?= $row['status'] ;?></h4></td>
+                                         <td class="text-center"><a href="ubahstatuskomen.php?id=<?= $row['id'];?>" class="btn btn-success <?php echo $row['status']=='approved'?'invisible':'';?>">Approve This</a></td>
                                          <?php
                                          echo"
                                          </tr>"; 
