@@ -12,6 +12,3 @@ contoh : <?php echo $row['status']=='approved'? green:red ; ?>
 
 operator php:
 https://www.w3schools.com/php/php_operators.asp
-
-
-PPPPP
