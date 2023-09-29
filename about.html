@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>THEMukmin</title>
+        <title>THEMosque - Mosque Website Template</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -40,7 +40,66 @@
         <!-- Spinner End -->
 
 
-        <?php include "menu.php" ; ?>
+        <!-- Topbar start -->
+        <div class="container-fluid fixed-top">
+            <div class="container topbar d-none d-lg-block">
+                <div class="topbar-inner">
+                    <div class="row gx-0">
+                        <div class="col-lg-7 text-start">
+                            <div class="h-100 d-inline-flex align-items-center me-4">
+                                <span class="fa fa-phone-alt me-2 text-dark"></span>
+                                <a href="#" class="text-secondary"><span>+012 345 6789</span></a>
+                            </div>
+                            <div class="h-100 d-inline-flex align-items-center">
+                                <span class="far fa-envelope me-2 text-dark"></span>
+                                <a href="#" class="text-secondary"><span>info@example.com</span></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 text-end">
+                            <div class="h-100 d-inline-flex align-items-center">
+                                <span class="text-body">Follow Us:</span>
+                                <a class="text-dark px-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="text-dark px-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="text-dark px-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a class="text-dark px-2" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="text-body ps-4" href=""><i class="fa fa-lock text-dark me-1"></i> Signup/login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <nav class="navbar navbar-light navbar-expand-lg py-3">
+                    <a href="index.html" class="navbar-brand">
+                        <h1 class="mb-0">THE<span class="text-primary">Mosque</span> </h1>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars text-primary"></span>
+                    </button>
+                    <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+                        <div class="navbar-nav ms-lg-auto mx-xl-auto">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="about.html" class="nav-item nav-link active">About</a>
+                            <a href="activity.html" class="nav-item nav-link">Activities</a>
+                            <a href="event.html" class="nav-item nav-link">Events</a>
+                            <a href="sermon.html" class="nav-item nav-link">Sermons</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                                <div class="dropdown-menu m-0 rounded-0">
+                                    <a href="blog.html" class="dropdown-item">Latest Blog</a>
+                                    <a href="team.html" class="dropdown-item">Our Team</a>
+                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                    <a href="404.html" class="dropdown-item">404 Page</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <a href="" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block">Donate</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Topbar End -->
 
 
         <!-- Hero Start -->
@@ -49,11 +108,11 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="hero-header-inner animated zoomIn">
-                            <h1 class="display-1 text-dark">Tentang Kami</h1>
+                            <h1 class="display-1 text-dark">About Us</h1>
                             <ol class="breadcrumb mb-0">
-                                <li class="breadcrumb-item"><a href="#">Beranda</a></li>
-                                <li class="breadcrumb-item"><a href="#">Halaman</a></li>
-                                <li class="breadcrumb-item text-dark" aria-current="page">Tentang Kami</li>
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                                <li class="breadcrumb-item text-dark" aria-current="page">About</li>
                             </ol>
                         </div>
                     </div>
@@ -62,13 +121,95 @@
         </div>
         <!-- Hero End -->
 
-        <?php include "tentang-kami-banner.php" ; ?>
+
+        <!-- About Satrt -->
+        <div class="container-fluid about py-5">
+            <div class="container py-5">
+                <div class="row g-5 mb-5">
+                    <div class="col-xl-6">
+                        <div class="row g-4">
+                            <div class="col-6">
+                                <img src="img/about-1.jpg" class="img-fluid h-100 wow zoomIn" data-wow-delay="0.1s" alt="">
+                            </div>
+                            <div class="col-6">
+                                <img src="img/about-2.jpg" class="img-fluid pb-3 wow zoomIn" data-wow-delay="0.1s" alt="">
+                                <img src="img/about-3.jpg" class="img-fluid pt-3 wow zoomIn" data-wow-delay="0.1s" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeIn" data-wow-delay="0.5s">
+                        <p class="fs-5 text-uppercase text-primary">About THEMosque</p>
+                        <h1 class="display-5 pb-4 m-0">Allah Help Those Who Help Themselves</h1>
+                        <p class="pb-4">Lorem ipsum dolor sit amet elit. Donec tempus eros vel dolor mattis aliquam. Etiam quis mauris justo. Vivamus purus nulla, rutrum ac risus in.</p>
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="ps-3 d-flex align-items-center justify-content-start">
+                                    <span class="bg-primary btn-md-square rounded-circle mt-4 me-2"><i class="fa fa-eye text-dark fa-4x mb-5 pb-2"></i></span>
+                                    <div class="ms-4">
+                                        <h5>Our Vision</h5>
+                                        <p>Lorem ipsum dolor sit amet tetur nod elit sed</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="ps-3 d-flex align-items-center justify-content-start">
+                                    <span class="bg-primary btn-md-square rounded-circle mt-4 me-2"><i class="fa fa-flag text-dark fa-4x mb-5 pb-2"></i></span>
+                                    <div class="ms-4">
+                                        <h5>Our Mission</h5>
+                                        <p>Lorem ipsum dolor sit amet tetur nod elit sed</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-light p-3 mb-4">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-3">
+                                    <img src="img/about-child.jpg" class="img-fluid rounded-circle" alt="">
+                                </div>
+                                <div class="col-6">
+                                    <p class="mb-0">Lorem ipsum dolor sit amet elit. Donec tempus eros vel dolor mattis aliquam. Etiam quis mauris justo.</p>
+                                </div>
+                                <div class="col-3">
+                                        <h2 class="mb-0 text-primary text-center">$20,46</h2>
+                                        <h5 class="mb-0 text-center">Raised</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-2">
+                            <div class="col-md-6">
+                                <p class="mb-2"><i class="fa fa-check text-primary me-3"></i>Charity & Donation</p>
+                                <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>Parent Education</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="mb-2"><i class="fa fa-check text-primary me-3"></i>Hadith & Sunnah</p>
+                                <p class="mb-0"><i class="fa fa-check text-primary me-3"></i>Mosque Development</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container text-center bg-primary py-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-2">
+                            <i class="fa fa-mosque fa-5x text-white"></i>
+                        </div>
+                        <div class="col-lg-7 text-center text-lg-start">
+                            <h1 class="mb-0">Every Muslim Needs To Realise The Importance Of The "Pillar" Of Islam</h1>
+                        </div>
+                        <div class="col-lg-3">
+                            <a href="" class="btn btn-light py-2 px-4">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
 
         <!-- Team Start -->
         <div class="container-fluid team py-5">
             <div class="container py-5">
                 <div class="text-center mx-auto mb-5 wow fadeIn" data-wow-delay="0.1s" style="max-width: 700px;">
-                    <p class="fs-5 text-uppercase text-primary">Pesan dan kutipan</p>
+                    <p class="fs-5 text-uppercase text-primary">Our Team</p>
                     <h1 class="display-3">Meet Our Organizer</h1>
                 </div>
                 <div class="row g-5">

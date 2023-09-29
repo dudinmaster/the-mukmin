@@ -1,5 +1,5 @@
 <!-- About Satrt -->
-<div class="container-fluid about py-5">
+        <div class="container-fluid about py-5">
             <div class="container py-5">
                 <div class="row g-5 mb-5">
                     <div class="col-xl-6">
@@ -14,7 +14,7 @@
                         </div>
                     </div>
                     <div class="col-xl-6 wow fadeIn" data-wow-delay="0.5s">
-                        <p class="fs-5 text-uppercase text-primary">Tentang THEMosque</p>
+                        <p class="fs-5 text-uppercase text-primary">Tentang THEMukmin</p>
                         <h1 class="display-5 pb-4 m-0">Allah Help Those Who Help Themselves</h1>
                         <p class="pb-4">Lorem ipsum dolor sit amet elit. Donec tempus eros vel dolor mattis aliquam. Etiam quis mauris justo. Vivamus purus nulla, rutrum ac risus in.</p>
                         <div class="row g-4 mb-4">
@@ -22,7 +22,7 @@
                                 <div class="ps-3 d-flex align-items-center justify-content-start">
                                     <span class="bg-primary btn-md-square rounded-circle mt-4 me-2"><i class="fa fa-eye text-dark fa-4x mb-5 pb-2"></i></span>
                                     <div class="ms-4">
-                                        <h5>Visi kami</h5>
+                                        <h5>Our Vision</h5>
                                         <p>Lorem ipsum dolor sit amet tetur nod elit sed</p>
                                     </div>
                                 </div>
@@ -31,7 +31,7 @@
                                 <div class="ps-3 d-flex align-items-center justify-content-start">
                                     <span class="bg-primary btn-md-square rounded-circle mt-4 me-2"><i class="fa fa-flag text-dark fa-4x mb-5 pb-2"></i></span>
                                     <div class="ms-4">
-                                        <h5>Misi kami</h5>
+                                        <h5>Our Mission</h5>
                                         <p>Lorem ipsum dolor sit amet tetur nod elit sed</p>
                                     </div>
                                 </div>
@@ -46,8 +46,8 @@
                                     <p class="mb-0">Lorem ipsum dolor sit amet elit. Donec tempus eros vel dolor mattis aliquam. Etiam quis mauris justo.</p>
                                 </div>
                                 <div class="col-3">
-                                        <h2 class="mb-0 text-primary text-center">Rp 0</h2>
-                                        <h5 class="mb-0 text-center">Dana terkumpul</h5>
+                                        <h2 class="mb-0 text-primary text-center">$20,46</h2>
+                                        <h5 class="mb-0 text-center">Raised</h5>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                             <h1 class="mb-0">Setiap mukmin harus menyadari bagaimana doa mengubah hidupmu</h1>
                         </div>
                         <div class="col-lg-3">
-                            <a href="tentang-kami.php" class="btn btn-light py-2 px-4">Selengkapnya</a>
+                            <a href="" class="btn btn-light py-2 px-4">Selengkapnya</a>
                         </div>
                     </div>
                 </div>

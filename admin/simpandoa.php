@@ -12,7 +12,7 @@ $result = mysqli_query($conn, $sql);
 if($result){
     echo "<h3>Data baru berhasil disimpan";
         $yourURL="daftar-doa.php";
-        echo ("<script>location.href='$yourURL'</script>");
+        echo ("<script>history.href='$yourURL'</script>");
     }
 
     // echo nl2br("\n$first_name\n $last_name\n "
