@@ -20,7 +20,7 @@
                             <div class="ms-4">
                                 <h4><?= $row['judul'];?></h4>
                                 <p class="mb-4"><?php echo $trim_text . '...' ;?></p>
-                                <a href="isi_konten.php?id=<?= $row['id'];?>" class="btn btn-primary px-3">Read More</a>
+                                <a href="isi_konten.php?judul=<?= $row['judul'];?>" class="btn btn-primary px-3">Read More</a>
                             </div>
                         </div>
                     </div>

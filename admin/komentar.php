@@ -337,20 +337,32 @@ include "../config.php";
                                                     </tr>
                                                 </thead>
                                                 <?php
-                                                $sql = "select * from komentar order by date_created_add asc limit 5";
-                                                $result = mysqli_query($conn, $sql);
-                                                $number = 0;
-                                                if (mysqli_num_rows($result) > 0) {
+                                                $num_per_pages = 2;
+                                                $pages = isset($_GET['pages'])?(int)$_GET['pages'] : 1;
+                                                $first_pages = ($pages>1) ? ($pages * $num_per_pages) - $num_per_pages : 0;
+
+                                                $previous = $pages - 1;
+				                                $next = $pages + 1;
+
+                                                $data = mysqli_query($conn,"SELECT * FROM komentar");
+                                                // $result = mysqli_query($conn, $sql);
+
+                                                $total_data = mysqli_num_rows($data);
+                                                $total_pages = ceil($total_data / $num_per_pages);
+                                                $number = $first_pages+1;
+                                                $data_komentar = mysqli_query($conn,"SELECT * FROM komentar LIMIT  $first_pages, $num_per_pages");
+                                                if (mysqli_num_rows($data_komentar) > 0) {
                                                     // output data of each row
-                                                    while ($row = mysqli_fetch_assoc($result)) {
-                                                        $trim_text = substr($row['isi_komentar'], 0, 10);
-                                                        $number++;
+                                                    while ($row = mysqli_fetch_array($data_komentar)) {
+                                                        
+                                                    
                                                         //  $status = $row['status'];
-                                                        echo "
+                                                        echo ""; ?>
                                                         <tr>
-                                                        <td>$number</td>
+                                                        <td><?php echo $number++; ?></td>
+                                                        <?php echo "
                                                         <td>" . $row['date_created_add'] . ""; ?></td>
-                                                        <td><?= $trim_text . '...'; ?></td>
+                                                        <td><?= $row['isi_komentar']  ?></td>
                                                         <td>
                                                             <h4 style="color:<?php echo $row['status'] == 'approved' ? 'green' : 'red'; ?>;"><?= $row['status']; ?></h4>
                                                         </td>
@@ -366,10 +378,29 @@ include "../config.php";
                                                 </tr>
                                                 </tbody>
                                             </table>
-                                        </div>
-                                    </div>
-                                </div>
+                                            <nav aria-label="Page navigation example">
+                                                <ul class="pagination justify-content-center">
+                                                    <li class="page-item">
+                                                    <?php if($pages > 1){ echo "<a class='page-link' href='?pages=$previous'>Previous</a>"; } ?>
+                                                    
+                                                    </li>
+                                                    <?php 
+                                                    for($x=1;$x<=$total_pages;$x++){
+                                                        ?> 
+                                                        <li class="page-item"><a class="page-link" href="?pages=<?php echo $x ?>"><?php echo $x; ?></a></li>
+                                                        <?php
+                                                    }
+                                                    ?>				
+                                                    <li class="page-item">
+                                                    <a  class="page-link <?php if($pages >= $total_pages)echo 'invisible';?>" <?php if($pages < $total_pages) { echo "href='?pages=$next'"; } ?>>Next</a>
+                                                    <?php if($pages > $total_pages){ echo ("<script>history.back()</script>");}else{echo '';}?>
 
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                                                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
 

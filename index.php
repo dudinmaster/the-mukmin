@@ -23,7 +23,7 @@
                     <div class="hero-header-inner animated zoomIn">
                         <p class="fs-4 text-dark">Selamat datang di website THEMukmin</p>
                         <h1 class="display-1 mb-5 text-dark">Never underestimate the power of doa</h1>
-                        <a href="dzikir-doa.php" class="btn btn-primary py-3 px-5">Selengkapnya</a>
+                        <a href="dzikir-doa.php" style="color: #fff"class="btn btn-primary py-3 px-5">Selengkapnya</a>
                     </div>
                 </div>
             </div>

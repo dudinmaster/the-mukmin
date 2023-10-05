@@ -29,7 +29,7 @@
     <div class="container">
         <nav class="navbar navbar-light navbar-expand-lg py-3">
             <a href="index.php" class="navbar-brand">
-                <h1 class="mb-0">THE<span class="text-primary">Mukmin</span> </h1>
+                <h1 class="mb-0">THE<span style="color: #50C878">Mukmin</span> </h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars text-primary"></span>
